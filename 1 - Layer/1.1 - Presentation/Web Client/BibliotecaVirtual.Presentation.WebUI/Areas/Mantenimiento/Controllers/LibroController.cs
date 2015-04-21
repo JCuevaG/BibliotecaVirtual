@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BibliotecaVirtual.Domain.Entities;
 using BibliotecaVirtual.Domain.Interfaces.Services;
+using BibliotecaVirtual.Presentation.WebUI.ViewModels.Categoria;
 using BibliotecaVirtual.Presentation.WebUI.ViewModels.Libro;
 using System;
 using System.Collections.Generic;
@@ -14,16 +15,17 @@ namespace BibliotecaVirtual.Presentation.WebUI.Areas.Mantenimiento.Controllers
     {
 
         private readonly ILibroService _libroService;
+        private readonly ICategoriaService _categoriaService;
 
-
-        public LibroController(ILibroService _libroService)
+        public LibroController(ILibroService _libroService, ICategoriaService _categoriaService)
         {
             this._libroService = _libroService;
+            this._categoriaService = _categoriaService;
         }
 
         // GET: Mantenimiento/Libro
         public ActionResult Index()
-        {   
+        {            
             var clienteViewModel = Mapper.Map<IEnumerable<Libro>, IEnumerable<LibroViewModel>>(_libroService.GetAll());
             return View(clienteViewModel);
         }
@@ -31,7 +33,9 @@ namespace BibliotecaVirtual.Presentation.WebUI.Areas.Mantenimiento.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            LibroCreateViewModel _libroCreateViewModel = new LibroCreateViewModel();
+            _libroCreateViewModel.Categorias = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaService.GetAll());
+            return View(_libroCreateViewModel);
         }
 
         [HttpPost]

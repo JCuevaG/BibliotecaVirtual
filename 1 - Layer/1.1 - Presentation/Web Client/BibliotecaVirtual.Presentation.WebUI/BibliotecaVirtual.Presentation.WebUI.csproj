@@ -180,6 +180,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Mantenimiento\Controllers\CategoriaController.cs" />
     <Compile Include="Areas\Mantenimiento\Controllers\LibroController.cs" />
     <Compile Include="Areas\Mantenimiento\MantenimientoAreaRegistration.cs" />
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
@@ -193,6 +194,7 @@
     </Compile>
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\Categoria\CategoriaViewModel.cs" />
+    <Compile Include="ViewModels\Libro\LibroCreateViewModel.cs" />
     <Compile Include="ViewModels\Libro\LibroViewModel.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
@@ -213,6 +215,7 @@
     <Content Include="Areas\Mantenimiento\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Mantenimiento\Views\Libro\Index.cshtml" />
     <Content Include="Areas\Mantenimiento\Views\Libro\Create.cshtml" />
+    <Content Include="Areas\Mantenimiento\Views\Categoria\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -17,7 +17,15 @@
         <th>
             @Html.DisplayNameFor(model => model.CategoriaId)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAutor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th>
+            Acciones
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -26,7 +34,13 @@
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CategoriaId)
+            @Html.DisplayFor(modelItem => item.Categoria.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreAutor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
