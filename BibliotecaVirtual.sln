@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Layer", "1 - Layer", "{D864457C-CB43-4135-A88E-F131F9B691E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 - Presentation", "1.1 - Presentation", "{E50197A1-A865-4122-8D2E-EF0F5D9EBFAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Client", "Web Client", "{34D7F212-D9E9-4CE2-AD65-002B8F0BC9B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 - Service", "1.2 - Service", "{B5E39F81-8571-48EB-986A-51ED312A6A4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3 - Domain", "1.3 - Domain", "{E1ACD926-7D9B-4E60-81D8-A61EF819EF12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaVirtual.Presentation.WebUI", "1 - Layer\1.1 - Presentation\Web Client\BibliotecaVirtual.Presentation.WebUI\BibliotecaVirtual.Presentation.WebUI.csproj", "{67EE7A2F-6CD2-4D1B-913F-8F958179E73D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4 - Infrastructure", "1.4 - Infrastructure", "{4CB458FA-12FA-4B8D-A4FE-2527BBB3E0CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaVirtual.Domain", "1 - Layer\1.3 - Domain\BibliotecaVirtual.Domain\BibliotecaVirtual.Domain.csproj", "{FD262BAA-8CE0-4B0E-B567-B8008067FCD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaVirtual.Data", "1 - Layer\1.4 - Infrastructure\BibliotecaVirtual.Data\BibliotecaVirtual.Data.csproj", "{F066D5CA-91D2-4C9B-B9DC-C40EDFDD7070}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67EE7A2F-6CD2-4D1B-913F-8F958179E73D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67EE7A2F-6CD2-4D1B-913F-8F958179E73D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67EE7A2F-6CD2-4D1B-913F-8F958179E73D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67EE7A2F-6CD2-4D1B-913F-8F958179E73D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD262BAA-8CE0-4B0E-B567-B8008067FCD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD262BAA-8CE0-4B0E-B567-B8008067FCD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD262BAA-8CE0-4B0E-B567-B8008067FCD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD262BAA-8CE0-4B0E-B567-B8008067FCD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F066D5CA-91D2-4C9B-B9DC-C40EDFDD7070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F066D5CA-91D2-4C9B-B9DC-C40EDFDD7070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F066D5CA-91D2-4C9B-B9DC-C40EDFDD7070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F066D5CA-91D2-4C9B-B9DC-C40EDFDD7070}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E50197A1-A865-4122-8D2E-EF0F5D9EBFAF} = {D864457C-CB43-4135-A88E-F131F9B691E7}
+		{34D7F212-D9E9-4CE2-AD65-002B8F0BC9B2} = {E50197A1-A865-4122-8D2E-EF0F5D9EBFAF}
+		{B5E39F81-8571-48EB-986A-51ED312A6A4A} = {D864457C-CB43-4135-A88E-F131F9B691E7}
+		{E1ACD926-7D9B-4E60-81D8-A61EF819EF12} = {D864457C-CB43-4135-A88E-F131F9B691E7}
+		{67EE7A2F-6CD2-4D1B-913F-8F958179E73D} = {34D7F212-D9E9-4CE2-AD65-002B8F0BC9B2}
+		{4CB458FA-12FA-4B8D-A4FE-2527BBB3E0CE} = {D864457C-CB43-4135-A88E-F131F9B691E7}
+		{FD262BAA-8CE0-4B0E-B567-B8008067FCD0} = {E1ACD926-7D9B-4E60-81D8-A61EF819EF12}
+		{F066D5CA-91D2-4C9B-B9DC-C40EDFDD7070} = {4CB458FA-12FA-4B8D-A4FE-2527BBB3E0CE}
+	EndGlobalSection
+EndGlobal
