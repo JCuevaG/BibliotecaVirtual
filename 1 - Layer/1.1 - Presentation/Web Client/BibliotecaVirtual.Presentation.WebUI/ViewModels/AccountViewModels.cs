@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace BibliotecaVirtual.Presentation.WebUI.Models
+namespace BibliotecaVirtual.Presentation.WebUI.ViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {

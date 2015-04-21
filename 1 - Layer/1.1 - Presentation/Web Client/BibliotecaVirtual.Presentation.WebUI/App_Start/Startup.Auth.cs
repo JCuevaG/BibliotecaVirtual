@@ -5,7 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using BibliotecaVirtual.Presentation.WebUI.Models;
+using BibliotecaVirtual.Presentation.WebUI.ViewModels;
 
 namespace BibliotecaVirtual.Presentation.WebUI
 {

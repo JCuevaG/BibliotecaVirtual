@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace BibliotecaVirtual.Presentation.WebUI.Models
+namespace BibliotecaVirtual.Presentation.WebUI.ViewModels
 {
     public class IndexViewModel
     {

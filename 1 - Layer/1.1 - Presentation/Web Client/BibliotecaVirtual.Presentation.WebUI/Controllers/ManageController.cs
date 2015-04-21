@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using BibliotecaVirtual.Presentation.WebUI.Models;
+using BibliotecaVirtual.Presentation.WebUI.ViewModels;
 
 namespace BibliotecaVirtual.Presentation.WebUI.Controllers
 {

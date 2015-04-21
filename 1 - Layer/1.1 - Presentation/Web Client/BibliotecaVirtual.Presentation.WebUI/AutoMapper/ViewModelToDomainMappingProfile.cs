@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BibliotecaVirtual.Domain.Entities;
-using BibliotecaVirtual.Presentation.WebUI.ViewModels;
+using BibliotecaVirtual.Presentation.WebUI.ViewModels.Categoria;
+using BibliotecaVirtual.Presentation.WebUI.ViewModels.Libro;
 using System;
 using System.Collections.Generic;
 using System.Linq;

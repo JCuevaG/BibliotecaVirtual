@@ -49,6 +49,9 @@
     <Reference Include="Ninject">
       <HintPath>..\..\..\..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject.Extensions.Conventions">
+      <HintPath>..\..\..\..\packages\ninject.extensions.conventions.3.2.0.0\lib\net45-full\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject.Web.Common">
       <HintPath>..\..\..\..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
     </Reference>
@@ -189,8 +192,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AccountViewModels.cs" />
-    <Compile Include="ViewModels\CategoriaViewModel.cs" />
-    <Compile Include="ViewModels\LibroViewModel.cs" />
+    <Compile Include="ViewModels\Categoria\CategoriaViewModel.cs" />
+    <Compile Include="ViewModels\Libro\LibroViewModel.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,6 +212,7 @@
     <Content Include="Areas\Mantenimiento\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Mantenimiento\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Mantenimiento\Views\Libro\Index.cshtml" />
+    <Content Include="Areas\Mantenimiento\Views\Libro\Create.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -73,7 +73,8 @@ namespace BibliotecaVirtual.Presentation.WebUI.App_Start
             kernel.Bind<ICategoriaService>().To<CategoriaService>().InRequestScope();
 
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<,>)).InRequestScope();
-            kernel.Bind<ILibroRepository>().To<LibroRepository>().InRequestScope().WithConstructorArgument("context", kernel.Get<BibliotecaVirtualContext>());
+            kernel.Bind<ILibroRepository>().To<LibroRepository>().InRequestScope();
+            kernel.Bind<ICategoriaRepository>().To<CategoriaRepository>().InRequestScope();
         }        
     }
 }

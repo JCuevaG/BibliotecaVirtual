@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace BibliotecaVirtual.Presentation.WebUI.ViewModels
+namespace BibliotecaVirtual.Presentation.WebUI.ViewModels.Categoria
 {
     public class CategoriaViewModel
     {

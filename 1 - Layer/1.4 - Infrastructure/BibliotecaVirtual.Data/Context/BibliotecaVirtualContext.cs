@@ -5,7 +5,8 @@ namespace BibliotecaVirtual.Data.Context
 {
     public class BibliotecaVirtualContext : DbContext
     {
-        public BibliotecaVirtualContext() : base("BibliotecaVirtual")
+        public BibliotecaVirtualContext()
+            : base("BibliotecaVirtual")
         {
 
         }

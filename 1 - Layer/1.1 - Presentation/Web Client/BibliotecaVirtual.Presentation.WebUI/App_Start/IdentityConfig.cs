@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using BibliotecaVirtual.Presentation.WebUI.Models;
+using BibliotecaVirtual.Presentation.WebUI.ViewModels;
 
 namespace BibliotecaVirtual.Presentation.WebUI
 {
