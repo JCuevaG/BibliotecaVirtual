@@ -43,6 +43,7 @@ namespace BibliotecaVirtual.Data.Repositories
 
         public void Update(TEntity entity)
         {
+            Context.Set<TEntity>().Attach(entity);
             Context.Entry(entity).State = EntityState.Modified;
             Context.SaveChanges();
         }

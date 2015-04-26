@@ -12,7 +12,7 @@ namespace BibliotecaVirtual.Domain.Entities
         public string Usuario { get; set; }
         public DateTime? FechaSalida { get; set; }
         public DateTime? FechaDevolucion { get; set; }
-
         public Libro Libro { get; set; }
+        public string Estado { get; set; }
     }
 }

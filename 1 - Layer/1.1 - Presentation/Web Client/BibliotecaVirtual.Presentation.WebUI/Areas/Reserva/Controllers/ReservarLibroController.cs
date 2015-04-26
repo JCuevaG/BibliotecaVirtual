@@ -49,12 +49,13 @@ namespace BibliotecaVirtual.Presentation.WebUI.Areas.Reserva.Controllers
             String resultado = string.Empty;
             if (ModelState.IsValid)
             {
+                model.Estado = "R";//RESERVADO
                 var prestamoDomain = Mapper.Map<PrestamoViewModel, Prestamo>(model);
                 _prestamoService.Add(prestamoDomain);
 
-                LibroViewModel _libro = Mapper.Map<Libro, LibroViewModel>(_libroService.GetById(model.LibroId));
-                _libro.Cantidad = _libro.Cantidad - 1;
-                _libroService.Update(Mapper.Map<LibroViewModel, Libro>(_libro));
+                //LibroViewModel _libro = Mapper.Map<Libro, LibroViewModel>(_libroService.GetById(model.LibroId));
+                //_libro.Cantidad = _libro.Cantidad - 1;
+                //_libroService.Update(Mapper.Map<LibroViewModel, Libro>(_libro));
                
             }
             return Content("Se Registro Correctamente");
