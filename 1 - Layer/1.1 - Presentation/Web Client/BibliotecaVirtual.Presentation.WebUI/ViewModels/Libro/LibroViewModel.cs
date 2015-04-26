@@ -9,6 +9,7 @@ namespace BibliotecaVirtual.Presentation.WebUI.ViewModels.Libro
 {
     public class LibroViewModel
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
 
         [Display(Name="Categoria")]

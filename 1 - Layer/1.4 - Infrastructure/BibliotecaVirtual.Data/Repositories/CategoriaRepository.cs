@@ -14,5 +14,7 @@ namespace BibliotecaVirtual.Data.Repositories
         public CategoriaRepository(BibliotecaVirtualContext context) : base(context)
         {
         }
+
+        
     }
 }

@@ -13,6 +13,7 @@ namespace BibliotecaVirtual.Data.Context
 
         public DbSet<Libro> Libros { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Prestamo> Prestamos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -23,6 +24,12 @@ namespace BibliotecaVirtual.Data.Context
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Categoria>();
+
+            modelBuilder.Entity<Prestamo>()
+                .HasRequired(l => l.Libro)
+                .WithMany()
+                .HasForeignKey(l => l.LibroId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

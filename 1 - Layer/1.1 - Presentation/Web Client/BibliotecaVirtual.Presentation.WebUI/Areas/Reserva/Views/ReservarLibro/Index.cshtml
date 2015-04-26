@@ -1,0 +1,72 @@
+﻿@model BibliotecaVirtual.Presentation.WebUI.ViewModels.Libro.LibroSearchViewModel
+@using Microsoft.AspNet.Identity
+
+<h2>Reserva De Libros</h2>
+<p>
+    Filtros
+</p>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-md-1">Libro</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control",@id="IdNombre" } })
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="button" value="Buscar" id="btnFiltrar" class="btn btn-default" />
+    </div>
+</div>
+
+<div id="resultado"></div>
+<div id="dialogPrestamo"></div>
+ 
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        InicioJPopUp("#dialogPrestamo", 450, 400, false, "Generar Prestamo");
+        $('#btnFiltrar').click(function () {
+            $.ajax({
+                url: '@Url.Action("SerchLibro")',
+                data: { nombre: $('#IdNombre').val() },
+                type: 'GET',
+                success: function (data) {
+                    debugger;
+                    $('#resultado').html(data);
+                }
+            });
+        });
+    });
+
+    function InicioJPopUp(selector, ancho, alto, resize, titulo) {
+        $(selector).dialog({
+            autoOpen: false,
+            height: alto,
+            width: ancho,
+            modal: true,
+            resizable: resize,
+            hide: 'fade',
+            show: 'fade',
+            title: titulo
+        });
+    }
+
+    function InicioJPopUpOpen(selector) {
+        $(selector).dialog("open");
+    }
+
+    function ReservarLibro(Id) {
+        $.ajax({
+            url: '@Url.Action("PrestamoLibro")',
+            data: { Id:Id },
+            type: 'GET',
+            success: function (data) {
+                debugger;
+                $('#dialogPrestamo').html(data);               
+                InicioJPopUpOpen("#dialogPrestamo");
+            }
+        });
+    }
+</script>

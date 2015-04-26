@@ -15,6 +15,10 @@ namespace BibliotecaVirtual.Presentation.WebUI.App_Start
     using BibliotecaVirtual.Domain.Interfaces.Repositories;
     using BibliotecaVirtual.Data.Repositories;
     using BibliotecaVirtual.Data.Context;
+    using BibliotecaVirtual.Presentation.WebUI.ViewModels;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.Owin.Security;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     public static class NinjectWebCommon 
     {
@@ -71,10 +75,38 @@ namespace BibliotecaVirtual.Presentation.WebUI.App_Start
             kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>)).InRequestScope();
             kernel.Bind<ILibroService>().To<LibroService>().InRequestScope();
             kernel.Bind<ICategoriaService>().To<CategoriaService>().InRequestScope();
+            kernel.Bind<IPrestamoService>().To<PrestamoService>().InRequestScope();
 
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<,>)).InRequestScope();
             kernel.Bind<ILibroRepository>().To<LibroRepository>().InRequestScope();
             kernel.Bind<ICategoriaRepository>().To<CategoriaRepository>().InRequestScope();
+            kernel.Bind<IPrestamoRepository>().To<PrestamoRepository>().InRequestScope();
+            
+
+
+            //Configuracion para Identity
+            kernel.Bind<ApplicationDbContext>().ToSelf().InRequestScope();
+            kernel.Bind<IUserStore<ApplicationUser>>()
+                .To<UserStore<ApplicationUser>>()
+                .InRequestScope()
+                .WithConstructorArgument("context", kernel.Get<ApplicationDbContext>());
+            kernel.Bind<UserManager<ApplicationUser>>()
+                .ToSelf().InRequestScope();
+            kernel.Bind<IAuthenticationManager>()
+                .ToMethod(
+                    m => HttpContext.Current.GetOwinContext().Authentication
+                ).InRequestScope();
+
+            kernel.Bind<IRoleStore<IdentityRole, string>>()
+                .To<RoleStore<IdentityRole>>()
+                .InRequestScope()
+                .WithConstructorArgument("context", kernel.Get<ApplicationDbContext>());
+
+            kernel.Bind<RoleManager<IdentityRole>>().ToSelf().InRequestScope();
+            // finde inyeccion de dependencias para Identity
+            //Le digo a MVC que use ese resolver para crear los controllers
+            
+
         }        
     }
 }

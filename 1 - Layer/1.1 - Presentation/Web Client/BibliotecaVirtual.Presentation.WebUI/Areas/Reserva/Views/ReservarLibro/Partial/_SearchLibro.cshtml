@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BibliotecaVirtual.Presentation.WebUI.ViewModels.Libro.LibroSearchViewModel>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAutor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Where(x=>x.Cantidad>0))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreAutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                <button onclick="ReservarLibro(@item.Id)">Reservar</button>
+            </td>
+        </tr>
+    }
+
+</table>
